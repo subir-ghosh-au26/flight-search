@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Tab Container */
+
+.Tabs {
+    width: 90%;
+    height: auto;
+    max-height: 450px;
+    background: #053742;
+    margin: 1rem;
+    padding: 2rem 1rem;
+    color: #E8F0F2;
+    border-radius: 2rem;
+    @media (max-width: 769px) {
+        padding: 2rem 0;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+/* Tab Navigation */
+
+ul.nav {
+    width: 95%;
+    border: 1px solid #39A2DB;
+    border-radius: 2rem;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 }
 
-.App-link {
-  color: #61dafb;
+ul.nav li {
+    width: 50%;
+    padding: 1rem;
+    list-style: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.7s;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul.nav li:nth-child(2) {
+    border-radius: 0;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+}
+
+ul.nav li:hover {
+    background: rgba(50, 224, 196, 0.15);
+}
+
+ul.nav li.active {
+    background: #39A2DB;
+}
+
+
+/* First and Second Tab Styles */
+
+.FirstTab p,
+.SecondTab p {
+    font-size: 2rem;
+    text-align: left;
+    margin: 3 rem;
+    padding: 2px;
+}
+
+input {
+    border-radius: 5px;
+    background: #053742;
+    border: 1px transparent;
+    margin-bottom: 2px;
+    height: max-content;
 }
